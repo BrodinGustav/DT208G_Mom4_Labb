@@ -1,19 +1,19 @@
 <h2>Ramschema för Webbutvecklings-programmet, MIUN</h2>
 
 <label for="search">Sök: </label>
-<input type="text" id="search">
+<input type="text" id="search" [(ngModel)] = "searchValue" (input)="applyFilter()">
 
 <table id="courseTable">
-    <thead *ngFor="let kurser of kurser">
-        <tr>
-            <th>Kurskod</th>
-            <th>Kursnamn</th>   
-            <th>Progression</th>
-            <th>Syllabus</th>
-        </tr>   
+    <thead>
+        <td class="headline">Kurskod</td>
+        <td class="headline">Kursnamn</td>
+        <td class="headline">Progression</td>
+
+
+        <tr *ngFor="let kurser of filtreradeKurser">   <!--loopar igenom variabeln filtreradeKurer för filtrering av sökning-->
             <td> {{kurser.code}}</td>
             <td> {{kurser.coursename}}</td>            
             <td> {{kurser.progression}}</td>            
-            <td> {{kurser.syllabus}}</td>
+        </tr>
         </thead>
 </table>
