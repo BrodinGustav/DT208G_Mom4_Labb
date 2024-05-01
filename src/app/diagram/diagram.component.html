@@ -1,1 +1,12 @@
 <h2>Ramschema för Webbutvecklings-programmet, MIUN</h2>
+
+<section class="ramschema-container">
+    <ul>
+    <li *ngFor="let kurser of kurser">
+    <p> {{kurser.code}} </p>
+    <p> {{kurser.coursename}} </p>
+    <p> {{kurser.progression}} </p>
+    <p> {{kurser.syllabus}} </p>
+    </ul>
+
+</section>

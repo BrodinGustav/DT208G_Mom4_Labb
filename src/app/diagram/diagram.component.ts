@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Kurser } from '../models/kurser';
 import { RamschemaService } from '../services/ramschema.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-diagram',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],                    //Import av CommonModule för användning av NgFor i diagram-component.html
   templateUrl: './diagram.component.html',
   styleUrl: './diagram.component.css'
 })
@@ -16,7 +17,9 @@ export class DiagramComponent {
   constructor(private Ramschemaservice: RamschemaService ) {}  //Instans av Ramschemaservice injiceras i constructor
 
   ngOnInit() {
-    this.Ramschemaservice.getSchema().subscribe //Metod från ramschema.service.ts  (anropar urlen och returnerar en array med data för ramschemat)
+    this.Ramschemaservice.getSchema().subscribe((kurser) => { //Metod från ramschema.service.ts  (anropar urlen och returnerar en array med data för ramschemat)
+      this.kurser = kurser;                                   //lagrar kurser för anvädning till template
+    });
   }
 
 }
