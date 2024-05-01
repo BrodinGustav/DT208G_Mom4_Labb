@@ -3,6 +3,10 @@
 <label for="search">Sök: </label>
 <input type="text" id="search" [(ngModel)] = "searchValue" (input)="applyFilter()">
 
+@if(filtreradeKurser.length === 0) {
+    <p>Inga kurser hittades...</p>
+}
+
 <table id="courseTable">
     <thead>
         <td class="headline">Kurskod</td>
