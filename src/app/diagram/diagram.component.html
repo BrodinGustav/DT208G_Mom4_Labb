@@ -1,4 +1,4 @@
-<h2>Ramschema för Webbutvecklings-programmet, MIUN</h2>
+<h2>Webbutveckling - Ramschema</h2>
 
 <label for="search">Sök: </label>
 <input type="text" id="search" [(ngModel)] = "searchValue" (input)="applyFilter()">
@@ -9,9 +9,9 @@
 
 <table id="courseTable">
     <thead>
-        <td class="headline">Kurskod</td>
-        <td class="headline">Kursnamn</td>
-        <td class="headline">Progression</td>
+        <td class="headline"  (click)="sortTable('code')">Kurskod</td>
+        <td class="headline"  (click)="sortTable('coursename')">Kursnamn</td>
+        <td class="headline"  (click)="sortTable('progression')">Progression</td>
 
 
         <tr *ngFor="let kurser of filtreradeKurser">   <!--loopar igenom variabeln filtreradeKurer för filtrering av sökning-->
