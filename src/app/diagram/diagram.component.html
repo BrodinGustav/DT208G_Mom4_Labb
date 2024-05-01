@@ -1,12 +1,19 @@
 <h2>Ramschema för Webbutvecklings-programmet, MIUN</h2>
 
-<section class="ramschema-container">
-    <ul>
-    <li *ngFor="let kurser of kurser">
-    <p> {{kurser.code}} </p>
-    <p> {{kurser.coursename}} </p>
-    <p> {{kurser.progression}} </p>
-    <p> {{kurser.syllabus}} </p>
-    </ul>
+<label for="search">Sök: </label>
+<input type="text" id="search">
 
-</section>
+<table id="courseTable">
+    <thead *ngFor="let kurser of kurser">
+        <tr>
+            <th>Kurskod</th>
+            <th>Kursnamn</th>   
+            <th>Progression</th>
+            <th>Syllabus</th>
+        </tr>   
+            <td> {{kurser.code}}</td>
+            <td> {{kurser.coursename}}</td>            
+            <td> {{kurser.progression}}</td>            
+            <td> {{kurser.syllabus}}</td>
+        </thead>
+</table>
