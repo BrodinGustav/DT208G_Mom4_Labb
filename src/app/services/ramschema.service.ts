@@ -13,7 +13,7 @@ url: string ="https://webbutveckling.miun.se/files/ramschema_ht23.json";
   constructor(private http: HttpClient) { }
 
 //Methods
-getSchema(): Observable<Kurser[]> {
+getSchema(): Observable<Kurser[]> {               //Metod som anropar urlen och returnerar en array med data för ramschemat 
   return this.http.get<Kurser[]>(this.url);
 
 }
