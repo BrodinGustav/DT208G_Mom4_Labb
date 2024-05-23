@@ -1,27 +1,44 @@
-# Mom4Labb
+***Ramschema Webbsida***
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+**Översikt
+Denna webbapplikation är utformad för att visa ett ramschema för kurser inom webbutveckling. Den tillåter användare att filtrera kurserna och sortera dem efter olika kolumner.
 
-## Development server
+**Komponenter***
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Diagram Component
+Filer:
+diagram.component.ts
+diagram.component.html
+diagram.component.css
 
-## Code scaffolding
+Beskrivning:
+diagram.component.ts innehåller TypeScript-koden för metoder som hanterar sortering och filtrering av kurser.
+diagram.component.html innehåller HTML-strukturen för webbsidan, inklusive tabellen som visar kurserna.
+diagram.component.css innehåller CSS-stilar för att formatera tabellen och andra delar av webbsidan.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Models Component
+Filer:
+kurser.interface.ts
+Beskrivning:
+kurser.interface.ts definierar ett interface Kurser som används för att representera kursobjekt.
 
-## Build
+3. Service Component
+Filer:
+ramschema.service.ts
+Beskrivning:
+ramschema.service.ts är en Angular service som hanterar HTTP-anrop för att hämta data för ramschemat från en extern källa.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+4. Global CSS
+Filer:
+style.css
+Beskrivning:
+style.css innehåller globala CSS-regler som tillämpas på hela webbapplikationen, till exempel stilregler för <body>-elementet.
 
-## Running unit tests
+**Installation och Användning
+För att köra denna webbapplikation lokalt, följ dessa steg:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Klona detta repository till din lokala dator.
+Öppna en terminal och navigera till den klonade katalogen.
+Kör npm install för att installera alla nödvändiga beroenden.
+Starta sedan utvecklingsservern genom att köra ng serve.
+Öppna en webbläsare och navigera till http://localhost:4200/ för att visa webbapplikationen.
